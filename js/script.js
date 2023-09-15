@@ -1,3 +1,6 @@
+// PAROLA PALINDROMA
+
+/*
 const content = document.getElementById('content');
 
 const word = prompt('Inserire parola');
@@ -18,3 +21,17 @@ if(wordPalindrome){
 }
 
 content.innerHTML = message;
+*/
+
+//PARI O DISPARI
+
+const numPlayer = parseInt(prompt('Inserire un numero'));
+const evenOdd = prompt('Pari o dispari');
+const numComputer = randomizer(1,5);
+
+function randomizer (min, max){
+    return Math.floor( Math.random()*(max - min +1) + min);
+}
+
+console.log(numPlayer);
+console.log(numComputer);
