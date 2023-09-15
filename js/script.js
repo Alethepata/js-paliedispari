@@ -1,16 +1,20 @@
+const content = document.getElementById('content');
+
 const word = prompt('Inserire parola');
 const reverse = word.split('').reverse().join('');
 let wordPalindrome = palindrome(word);
 
+
+
 function palindrome (word){
-    if(word.toLowerCase == reverse.toLowerCase) return true
+    if(word == reverse) return true
     return false
 }
 
 if(wordPalindrome){
-    message = 'si'; 
+    message = 'La parola ' + word + ' è polindoma'; 
 }else {
-    message = 'no'; 
+    message = 'La parola ' + word + ' non è polindoma'; 
 }
 
-console.log(message);
+content.innerHTML = message;
