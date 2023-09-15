@@ -1,6 +1,6 @@
 // PAROLA PALINDROMA
 
-/*
+
 const content = document.getElementById('content');
 
 const word = prompt('Inserire parola');
@@ -21,16 +21,19 @@ if(wordPalindrome){
 }
 
 content.innerHTML = message;
-*/
+
 
 //PARI O DISPARI
+
+const secondContent = document.getElementById('second-content');
 
 const numPlayer =parseInt(prompt('Inserire un numero')); 
 const  evenOddPlayer=prompt('Pari o dispari');
 const numComputer =randomizer(1,5);
 const sum = numPlayer + numComputer;
 const result = evenOdd(sum);
-const message = resultEvenOdd(result);
+const messageresult = resultEvenOdd(result);
+let messageDue;
 
 
 
@@ -52,11 +55,17 @@ function resultEvenOdd (result){
 }
 
 
+function palindrome (word){
+    if(word == reverse) return true
+    return false
+}
 
 
+if(messageresult){
+    messageDue = 'Hai vinto ' ; 
+}else {
+    messageDue = 'Hai perso '; 
+}
 
-console.log(numPlayer);
-console.log(numComputer);
-console.log(sum);
-console.log(result);
-console.log(message);
+secondContent.innerHTML = messageDue + ' perchè tu hai scelto ' + numPlayer + ' ' + evenOddPlayer + 
+'. Il Computer ha scelto ' + numComputer + '. La somma è ' + sum;
