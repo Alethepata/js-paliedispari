@@ -3,7 +3,7 @@ const reverse = word.split('').reverse().join('');
 let wordPalindrome = palindrome(word);
 
 function palindrome (word){
-    if(word == reverse) return true
+    if(word.toLowerCase == reverse.toLowerCase) return true
     return false
 }
 
