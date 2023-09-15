@@ -26,12 +26,20 @@ content.innerHTML = message;
 //PARI O DISPARI
 
 const numPlayer = parseInt(prompt('Inserire un numero'));
-const evenOdd = prompt('Pari o dispari');
+const  evenOddPlayer= prompt('Pari o dispari');
 const numComputer = randomizer(1,5);
+const sum = numPlayer + numComputer;
+const risultato = evenOdd(sum);
 
 function randomizer (min, max){
     return Math.floor( Math.random()*(max - min +1) + min);
 }
 
+function evenOdd (value){
+    if(value % 2) return false
+    return true
+}
+
 console.log(numPlayer);
 console.log(numComputer);
+console.log(risultato);
