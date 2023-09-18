@@ -8,13 +8,13 @@ const inputWord = document.getElementById('input-word');
 const btn1= document.getElementById('btn-1');
 
 btn1.addEventListener('click', function(){
+    
 const word = inputWord.value;
-
-const reverse = word.split('').reverse().join('');
 
 let wordPalindrome = palindrome(word);
 
 function palindrome (word){
+    const reverse = word.split('').reverse().join('');
     if(word == reverse) return true
     return false
 }
@@ -52,7 +52,7 @@ function randomizer (min, max){
 }
 function evenOdd (value){
     if(value % 2) return 'dispari'
-    else if( !(value % 2)) return 'pari'
+    return 'pari'
 }
 function resultEvenOdd (result){
     if(evenOddPlayer === result) return true
